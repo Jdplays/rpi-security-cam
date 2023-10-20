@@ -1,11 +1,11 @@
 import cv2
 import time
 import numpy as np
-import VideoStream
+from VideoStream import VideoStream
 
 class VideoCamera(object):
     def __init__(self, flip = False):
-        self.vs = VideoStream
+        self.vs = VideoStream()
         self.flip = flip
         time.sleep(2.0)
 
