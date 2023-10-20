@@ -1,5 +1,4 @@
 import cv2
-from mail import sendEmail
 from flask import Flask, render_template, Response
 from camera import VideoCamera
 from flask_basicauth import BasicAuth
