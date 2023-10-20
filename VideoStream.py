@@ -26,11 +26,3 @@ class VideoStream:
 
     def __exit__(self, exc_type, exc_value, traceback):
         self.release()
-
-if __name__ == "__main__":
-    with VideoStream() as vs:
-        while True:
-            frame = vs.read()
-            cv2.imshow("USB Camera Stream", frame)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
