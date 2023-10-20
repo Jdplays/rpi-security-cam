@@ -3,8 +3,6 @@ import cv2
 class VideoStream:
     def __init__(self, source=0):
         self.cap = cv2.VideoCapture(source)
-        if not self.cap.isOpened():
-            raise Exception("Error: Could not open the camera.")
 
     def start(self):
         pass  # The video stream is already started when the object is created
