@@ -9,9 +9,6 @@ class VideoCamera(object):
         self.flip = flip
         time.sleep(2.0)
 
-    def __del__(self):
-        self.vs.stop()
-
     def flip_if_needed(self, frame):
         if self.flip:
             return np.flip(frame, 0)
