@@ -22,9 +22,9 @@ def index():
 
 def gen(camera):
     while True:
-        frame = camera.get_object(object_classifier)
+        frame = camera.get_frame()
         yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame.tostring() + b'\r\n\r\n')
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')  # Use frame directly
 
 @app.route('/video_feed')
 def video_feed():
